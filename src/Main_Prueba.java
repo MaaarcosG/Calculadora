@@ -5,6 +5,8 @@ import java.io.InputStreamReader;
 
 public class Main_Prueba {
 	public static void main(String [] args) {
+		String line1 = "";
+		String line2 = "";
 		try {
 			/*Abrimos el archivo de texto*/
 			FileInputStream archivo = new FileInputStream("datos.txt");
@@ -12,9 +14,16 @@ public class Main_Prueba {
 			DataInputStream entrada = new DataInputStream(archivo);
 			/*Buffer, que seriva para lectura*/
 			BufferedReader buffer = new BufferedReader(new InputStreamReader(entrada));
+			/*Leer archivo*/
+			while ((line1 = buffer.readLine()) != null) {
+				/*Imprime linea*/
+				line2 = line1;
+				System.out.println("Operaciones ingresada " + line1);
+			}
+			entrada.close();
 		} catch (Exception e) {
-			/**/
-			System.err.println("Ocurrio un error" + e.getMessage());
+			/*Mensaje de error*/
+			System.err.println("Ocurrio un error " + e.getMessage());
 		}
 	}
 }
