@@ -18,20 +18,16 @@ public class Main_Prueba {
 			/*Buffer, que servira para lectura*/
 			BufferedReader buffer = new BufferedReader(new InputStreamReader(entrada));
 			/*Leer archivo*/
-			
-			while (buffer.readLine() != null) {
-				String line=buffer.readLine();
-				System.out.println(line);
-				System.out.println("estado 1");
-			}
-			System.out.println("estado 2");
+			String line = buffer.readLine();
+			System.out.println(line);
+			System.out.println("estado 1");
 			entrada.close();
 		
 		} 
 		catch (Exception e) {
 			/*Mensaje de error*/
 			System.err.println("Ocurrio un error " + e.getMessage());
-			System.out.println("estado 3");
+			System.out.println("estado 2");
 		}
 		
 		//System.out.println("El resultado es de: " + dato.pop());
