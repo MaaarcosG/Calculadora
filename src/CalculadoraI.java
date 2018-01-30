@@ -4,6 +4,5 @@
  * @since 26 de enero 2018
  */
 public interface CalculadoraI {
-	// Soy bien hueco
 	public String calcular(String expresion);
 }

@@ -4,6 +4,7 @@
  * @since 26 de enero 2018
  */
 public interface Stack<E> {
+	
 	public void push(E item);
 	   // pre: 
 	   // post: item is added to stack
@@ -22,4 +23,5 @@ public interface Stack<E> {
 	   
 	public int size();
 	   // post: returns the number of elements in the stack
+	
 }
