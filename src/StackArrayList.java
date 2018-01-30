@@ -27,10 +27,11 @@ public class StackArrayList<E> implements Stack<E> {
 	 * @return datos removidos
 	 */
 	@Override
-	public E pop() {
-		/*Eliminamos datos*/
+	public E pop()
+	{
 		return datos.remove(size()-1);
 	}
+
 	/**
 	 * @return 
 	 */
@@ -55,5 +56,4 @@ public class StackArrayList<E> implements Stack<E> {
 		/*Da el tamaño de los datos*/
 		return datos.size();
 	}
-
 }

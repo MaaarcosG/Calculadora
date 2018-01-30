@@ -10,7 +10,10 @@ public class Main_Prueba {
 	public static void main(String [] args) {
 		
 		Calculadora leer = new Calculadora();
-		String line;
+		String line = "";
+		int resultado = 0;
+		int num1 = 0;
+		int num2 =0;
 		try {
 		
 			/*Abrimos el archivo de texto*/
@@ -22,8 +25,7 @@ public class Main_Prueba {
 			/*Leer archivo*/
 			
 			if ((line=buffer.readLine()) != null) {
-				System.out.println(line);
-				System.out.println("estado 1");
+				System.out.println(line.replace("", ""));
 			}
 			else {
 				System.err.println("El .txt esta vacio");
@@ -38,6 +40,34 @@ public class Main_Prueba {
 			System.out.println("estado 2");
 		}
 		
-		//System.out.println("El resultado es de: " + dato.pop());
+		for(int i=0; i < line.length(); i++) {
+			if(line.charAt(i) == '+') {
+				num1 = dato.pop();
+				num2 = dato.pop();
+				resultado = num1 + num2;
+				dato.push(resultado);
+				
+			} if(line.charAt(i) == '-') {
+				num1 = dato.pop();
+				num2 = dato.pop();
+				resultado = num1 - num2;
+				dato.push(resultado);
+			} if(line.charAt(i) == '*') {
+				num1 = dato.pop();
+				num2 = dato.pop();
+				resultado = num1 * num2;
+				dato.push(resultado);
+			} if(line.charAt(i) == '/') {
+				num1 = dato.pop();
+				num2 = dato.pop();
+				resultado = num2 / num1;
+				dato.push(resultado);
+			}
+			if (Character.getNumericValue(line.charAt(i)) >= 0) {
+				int datos = Character.getNumericValue(line.charAt(i));
+				dato.push(datos);
+			}
+		}
+		System.out.print("resultado "  +  dato.pop());
 	}
 }
