@@ -10,8 +10,12 @@ import java.io.InputStreamReader;
  */
 public class Calculadora implements CalculadoraI {
 	/*Atributos de la clase*/
-	private static Stack<Integer> datos;
+	private static Stack<Integer> datos = new StackArrayList<Integer>();
 	
+	 /*Constructor de la clase*/
+	public Calculadora() {
+		
+	}
 	@Override
 	public String calcular(String expresion) {
 		/*Ciclo para recorrer el archivo*/
@@ -56,7 +60,7 @@ public class Calculadora implements CalculadoraI {
 			while ((line1 = buffer.readLine()) != null) {
 				/*Imprime linea*/
 				expresion = line1;
-				System.out.println("Operaciones ingresada " + line1.substring(0, 2));
+				System.out.println("Operaciones ingresada " + line1);
 			}
 			entrada.close();
 		} catch (Exception e) {
