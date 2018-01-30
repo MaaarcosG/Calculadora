@@ -3,12 +3,14 @@ import java.io.*;
 
 public class Main_Prueba {
 	
+	
+	
 	private static Stack<Integer> dato = new StackArrayList<Integer>(); 
 	
 	public static void main(String [] args) {
 		
 		Calculadora leer = new Calculadora();
-		
+		String line;
 		try {
 		
 			/*Abrimos el archivo de texto*/
@@ -19,13 +21,12 @@ public class Main_Prueba {
 			BufferedReader buffer = new BufferedReader(new InputStreamReader(entrada));
 			/*Leer archivo*/
 			
-			if (buffer.readLine() == null) {
-				System.err.println("El .txt esta vacio");
-			}
-			else {
-				String line = buffer.readLine();
+			if ((line=buffer.readLine()) != null) {
 				System.out.println(line);
 				System.out.println("estado 1");
+			}
+			else {
+				System.err.println("El .txt esta vacio");
 			}
 			
 			entrada.close();
