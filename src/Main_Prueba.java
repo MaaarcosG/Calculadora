@@ -2,14 +2,12 @@ import javax.swing.JOptionPane;
 import java.io.*;
 
 public class Main_Prueba {
-	
 	private static Stack<Integer> dato = new StackArrayList<Integer>(); 
 	
 	public static void main(String [] args) {
-		String linea1 = "";
-		String linea2 = "";
-		Calculadora leer = new Calculadora();
 		
+		Calculadora leer = new Calculadora();
+		String line;
 		try {
 		
 			/*Abrimos el archivo de texto*/
@@ -19,13 +17,13 @@ public class Main_Prueba {
 			/*Buffer, que servira para lectura*/
 			BufferedReader buffer = new BufferedReader(new InputStreamReader(entrada));
 			/*Leer archivo*/
-			linea1 = buffer.readLine();
-			if (linea1 == null) {
-				System.err.println("El .txt esta vacio");
+			
+			if ((line=buffer.readLine()) != null) {
+				System.out.println(line);
+				System.out.println("estado 1");
 			}
 			else {
-				linea2 = linea1;
-				System.out.println("Lo que esta en el archivo del texto: " + linea2);
+				System.err.println("El .txt esta vacio");
 			}
 			
 			entrada.close();
