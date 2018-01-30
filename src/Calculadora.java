@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
  * @since 26 de enero 2018
  */
 public class Calculadora implements CalculadoraI {
-	
+	String raul= "es bien hueco";
 	/*Atributos de la clase*/
 	private static Stack<Integer> datos = new StackArrayList<Integer>();
 	
