@@ -18,9 +18,16 @@ public class Main_Prueba {
 			/*Buffer, que servira para lectura*/
 			BufferedReader buffer = new BufferedReader(new InputStreamReader(entrada));
 			/*Leer archivo*/
-			String line = buffer.readLine();
-			System.out.println(line);
-			System.out.println("estado 1");
+			
+			if (buffer.readLine() == null) {
+				System.err.println("El .txt esta vacio");
+			}
+			else {
+				String line = buffer.readLine();
+				System.out.println(line);
+				System.out.println("estado 1");
+			}
+			
 			entrada.close();
 		
 		} 
