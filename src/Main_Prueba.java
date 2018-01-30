@@ -38,6 +38,6 @@ public class Main_Prueba {
 			System.out.println("estado 2");
 		}
 		
-		System.out.print("resultado "  +  dato.pop());
+		//System.out.print("resultado "  +  dato.pop());
 	}
 }
