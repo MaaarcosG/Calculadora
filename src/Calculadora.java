@@ -32,7 +32,7 @@ public class Calculadora implements CalculadoraI {
 			while ((line1 = buffer.readLine()) != null) {
 				/*Imprime linea*/
 				expresion = line1;
-				System.out.println("Operaciones ingresada " + line1);
+				System.out.println("Operaciones ingresada " + line1.substring(0, 2));
 			}
 			entrada.close();
 		} catch (Exception e) {
