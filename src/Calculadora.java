@@ -14,7 +14,31 @@ public class Calculadora implements CalculadoraI {
 	
 	@Override
 	public String calcular(String expresion) {
-
+		/*Ciclo para recorrer el archivo*/
+		for(int i=0; i<expresion.length(); i++) {
+			/*Condicion para sumar*/
+			if(expresion.charAt(i) == '+') {
+				int num1 = datos.pop();
+				int num2 = datos.pop();
+				int resultado = num1 + num2;
+				datos.push(resultado);
+			} if(expresion.charAt(i) == '-') {
+				int num1 = datos.pop();
+				int num2 = datos.pop();
+				int resultado = num1 - num2;
+				datos.push(resultado);
+			} if(expresion.charAt(i) == '*') {
+				int num1 = datos.pop();
+				int num2 = datos.pop();
+				int resultado = num1 * num2;
+				datos.push(resultado);
+			} if(expresion.charAt(i) == '/') {
+				int num1 = datos.pop();
+				int num2 = datos.pop();
+				int resultado = num2 / num1;
+				datos.push(resultado);
+			} 
+		}
 		return expresion;
 	}
 	/**
