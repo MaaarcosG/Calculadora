@@ -10,7 +10,7 @@ public class Main_Prueba {
 	public static void main(String [] args) {
 		
 		Calculadora leer = new Calculadora();
-		String line;
+		String line = "";
 		try {
 		
 			/*Abrimos el archivo de texto*/
@@ -22,8 +22,8 @@ public class Main_Prueba {
 			/*Leer archivo*/
 			
 			if ((line=buffer.readLine()) != null) {
-				System.out.println(line);
-				System.out.println("estado 1");
+				line=line.replace("", "");
+				System.err.println(leer.calcular(line));
 			}
 			else {
 				System.err.println("El .txt esta vacio");
@@ -38,6 +38,6 @@ public class Main_Prueba {
 			System.out.println("estado 2");
 		}
 		
-		//System.out.println("El resultado es de: " + dato.pop());
+		System.out.print("resultado "  +  dato.pop());
 	}
 }
