@@ -1,11 +1,6 @@
 import java.io.*;
 
 public class Main_Prueba {
-	
-	
-	
-	private static Stack<Integer> dato = new StackVector<Integer>(); 
-	
 	public static void main(String [] args) {
 		/*Atributo de la clase leer*/
 		Calculadora leer = new Calculadora();
