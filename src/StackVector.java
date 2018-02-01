@@ -16,26 +16,26 @@ public class StackVector<E> implements Stack<E> {
 
 	@Override
 	public E pop() {
-		// TODO Auto-generated method stub
-		return null;
+		/*Elimina el ultimo dato*/
+		return datos.remove(size() - 1);
 	}
 
 	@Override
 	public E peek() {
-		// TODO Auto-generated method stub
-		return null;
+		/*Devuelve el ultimo dato*/
+		return datos.get(size() - 1);
 	}
 
 	@Override
 	public boolean empty() {
-		// TODO Auto-generated method stub
-		return false;
+		/*Devuelve si esta lleno o no*/
+		return size() == 0;
 	}
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		/*El tamaño del vector*/
+		return datos.size();
 	}
 
 }
