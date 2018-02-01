@@ -1,16 +1,11 @@
-import javax.swing.JOptionPane;
 import java.io.*;
 
 public class Main_Prueba {
-	
-	
-	
-	private static Stack<Integer> dato = new StackArrayList<Integer>(); 
-	
 	public static void main(String [] args) {
-		
+		/*Atributo de la clase leer*/
 		Calculadora leer = new Calculadora();
-		String line = "";
+		/*Atributo de la clase*/
+		String expresion = "";
 		try {
 		
 			/*Abrimos el archivo de texto*/
@@ -21,11 +16,12 @@ public class Main_Prueba {
 			BufferedReader buffer = new BufferedReader(new InputStreamReader(entrada));
 			/*Leer archivo*/
 			
-			if ((line=buffer.readLine()) != null) {
-				line=line.replace("", "");
-				System.err.println(leer.calcular(line));
+			/*Condicion para verificar si esta lleno o no*/
+			if ((expresion=buffer.readLine()) != null) {
+				System.out.println(expresion.replace(" ", " "));
 			}
 			else {
+				/*Si esta vacio se manda el mensaje*/
 				System.err.println("El .txt esta vacio");
 			}
 			
@@ -35,9 +31,8 @@ public class Main_Prueba {
 		catch (Exception e) {
 			/*Mensaje de error*/
 			System.err.println("Ocurrio un error " + e.getMessage());
-			System.out.println("estado 2");
 		}
-		
-		//System.out.print("resultado "  +  dato.pop());
+		/*Metodo*/
+		System.out.println("Resultado de los calculos: " + leer.calcular(expresion));
 	}
 }
