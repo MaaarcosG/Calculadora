@@ -49,7 +49,7 @@ public class Calculadora implements CalculadoraI {
 				dato.push(datos);
 			}
 		}
-		return expresion;
+		return String.valueOf(resultado);
 	}
 	
 }

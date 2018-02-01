@@ -7,8 +7,9 @@ public class Main_Prueba {
 	private static Stack<Integer> dato = new StackVector<Integer>(); 
 	
 	public static void main(String [] args) {
-		
+		/*Atributo de la clase leer*/
 		Calculadora leer = new Calculadora();
+		/*Atributo de la clase*/
 		String expresion = "";
 		try {
 		
@@ -20,10 +21,12 @@ public class Main_Prueba {
 			BufferedReader buffer = new BufferedReader(new InputStreamReader(entrada));
 			/*Leer archivo*/
 			
+			/*Condicion para verificar si esta lleno o no*/
 			if ((expresion=buffer.readLine()) != null) {
 				System.out.println(expresion.replace("",""));
 			}
 			else {
+				/*Si esta vacio se manda el mensaje*/
 				System.err.println("El .txt esta vacio");
 			}
 			
@@ -36,7 +39,6 @@ public class Main_Prueba {
 			System.out.println("estado 2");
 		}
 		/*Metodo*/
-		leer.calcular(expresion);
-		System.out.print("resultado "  +  dato.pop());
+		System.out.println("Resultado de los calculos: " + leer.calcular(expresion));
 	}
 }
