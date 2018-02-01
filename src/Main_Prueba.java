@@ -18,7 +18,7 @@ public class Main_Prueba {
 			
 			/*Condicion para verificar si esta lleno o no*/
 			if ((expresion=buffer.readLine()) != null) {
-				System.out.println(expresion.replace("",""));
+				System.out.println(expresion.replace(" ", " "));
 			}
 			else {
 				/*Si esta vacio se manda el mensaje*/
