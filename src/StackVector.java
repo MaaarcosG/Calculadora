@@ -3,6 +3,7 @@ import java.util.Vector;
 public class StackVector<E> implements Stack<E> {
 	protected Vector<E> datos;
 	
+	/*Constructor de la clase*/
 	public StackVector() {
 		datos = new Vector<E>();
 	}
