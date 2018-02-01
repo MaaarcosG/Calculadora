@@ -31,7 +31,6 @@ public class Main_Prueba {
 		catch (Exception e) {
 			/*Mensaje de error*/
 			System.err.println("Ocurrio un error " + e.getMessage());
-			System.out.println("estado 2");
 		}
 		/*Metodo*/
 		System.out.println("Resultado de los calculos: " + leer.calcular(expresion));

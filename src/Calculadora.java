@@ -19,31 +19,44 @@ public class Calculadora implements CalculadoraI {
 		num2 = 0;
 	}
 	
+	/*Metodo para calcular*/
 	@Override
 	public String calcular(String expresion) {
 		for(int i=0; i < expresion.length(); i++) {
+			/*Si encuentra u nsigno "+", se añadara un dato utilizando pop y se la operacion 
+			 * se guardara en el atributo resultado utilizando push*/
 			if(expresion.charAt(i) == '+') {
 				num1 = dato.pop();
 				num2 = dato.pop();
 				resultado = num1 + num2;
 				dato.push(resultado);
-				
-			} if(expresion.charAt(i) == '-') {
+			} 
+			/*Si encuentra u nsigno "-", se añadara un dato utilizando pop y se la operacion 
+			 * se guardara en el atributo resultado utilizando push*/	
+			if(expresion.charAt(i) == '-') {
 				num1 = dato.pop();
 				num2 = dato.pop();
 				resultado = num1 - num2;
 				dato.push(resultado);
-			} if(expresion.charAt(i) == '*') {
+			}
+			/*Si encuentra u nsigno "*", se añadara un dato utilizando pop y se la operacion 
+			 * se guardara en el atributo resultado utilizando push*/	
+			if(expresion.charAt(i) == '*') {
 				num1 = dato.pop();
 				num2 = dato.pop();
 				resultado = num1 * num2;
 				dato.push(resultado);
-			} if(expresion.charAt(i) == '/') {
+			}
+			/*Si encuentra u nsigno "/", se añadara un dato utilizando pop y se la operacion 
+			 * se guardara en el atributo resultado utilizando push*/	
+			if(expresion.charAt(i) == '/') {
 				num1 = dato.pop();
 				num2 = dato.pop();
 				resultado = num2 / num1;
 				dato.push(resultado);
 			}
+			/*Si el resultado es menor o igual a 0, se añadira un valor numerico a la cadena
+			 * para asi tener un dato integer dentro del resultado, y no devolvera un error*/
 			if (Character.getNumericValue(expresion.charAt(i)) >= 0) {
 				int datos = Character.getNumericValue(expresion.charAt(i));
 				dato.push(datos);
