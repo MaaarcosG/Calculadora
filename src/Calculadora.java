@@ -5,7 +5,7 @@
  */
 public class Calculadora implements CalculadoraI {
 	/*Atributos de la clase*/
-	private static Stack<Integer> datos = new StackArrayList<Integer>();
+	private static Stack<Integer> datos = new StackVector<Integer>();
 	
 	
 	/*Constructor de la clase*/

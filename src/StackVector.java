@@ -1,15 +1,16 @@
+import java.util.Vector;
 
-public class Vector<E> implements Stack<E> {
+public class StackVector<E> implements Stack<E> {
 	protected Vector<E> datos;
 	
-	/*Constructor de la clase*/
-	public Vector() {
+	public StackVector() {
 		datos = new Vector<E>();
 	}
 	
 	@Override
 	public void push(E item) {
-		
+		/*Añadimos datos al stack*/
+		datos.addElement(item);
 		
 	}
 

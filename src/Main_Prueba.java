@@ -1,11 +1,10 @@
-import javax.swing.JOptionPane;
 import java.io.*;
 
 public class Main_Prueba {
 	
 	
 	
-	private static Stack<Integer> dato = new StackArrayList<Integer>(); 
+	private static Stack<Integer> dato = new StackVector<Integer>(); 
 	
 	public static void main(String [] args) {
 		
