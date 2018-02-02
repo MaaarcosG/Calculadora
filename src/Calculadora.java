@@ -4,7 +4,6 @@
  * @since 26 de enero 2018
  */
 public class Calculadora implements CalculadoraI {
-	
 	/*Atributos de la clase*/
 	private static Stack<Integer> dato = new StackVector<Integer>();
 	
