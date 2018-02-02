@@ -3,9 +3,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class PruebasJunit {
-
+	/*Prueba de JUnit*/
 	@Test
 	void pruebaStack() {
+		/*Atributos de la clas stack*/
 		StackVector<String> datos = new StackVector<String>();
 		/* Prueba Push */
 		datos.push("1");
@@ -16,7 +17,7 @@ class PruebasJunit {
 		datos.pop();
 		assertEquals(true, datos.empty());
 	}
-	
+	/*Prueba de la calculadora*/
 	@Test
 	void pruebaCalc() {
 		Calculadora calcu = new Calculadora();
